@@ -1,5 +1,5 @@
-# DTasksApp
-Decentralize App is a simple Tasks' App to practice the creation of a blockchain applicaciont using Solidity and Javascript.
+# BlockRentPE
+Alquiler de departamentos usando Blockchain.
 
 ![](./screenshot.png)
 
