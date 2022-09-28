@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlockRentPE</title>
+
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+
+  </head>
+
+  <body>
+    <header>
+      <div class="flex container">
+          <a id="logo" href="home.html">BlockRentPE</a>
+          <nav>
+              <a id="nav-toggle" class="hamburger-menu">
+                  <span class="strip"></span>
+                  <span class="strip"></span>
+                  <span class="strip"></span>
+              </a>
+
+              <ul id="nav-menu">
+                  <li><a href="home.html" class="active">Home</a></li>
+                  <li><a href="home.html#properties" >Departamentos</a></li>
+                  <li><a href="home.html#agents">Agentes</a></li>
+                  <li><a href="home.html#services">Servicios</a></li>
+                  <li><a href="home.html#contact">Contacto</a></li>
+                  <li><a href="index.html">Salir</a></li>
+                  <li id="close-flyout"><span class="fas fa-times"></span></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-body bg-dark rounded-0 mb-4 mt-5">
+            <h2>
+              <span class="material-icons"> grid_view </span>
+              Bienvenido
+            </h2>
+            <h6 class="text-muted">Smart Contract Alquiler</h6>
+            <div class="d-flex align-items-center">
+              <span class="material-icons"> account_balance_wallet </span>
+              <span class="ms-2">Wallet</span>
+            </div>
+            <span id="account"></span>
+          </div>
+
+          <div class="card card-body bg-dark rounded-0 mb-4 mt-3">
+            <h3 class="mb-3">
+              Detalle contrato
+            </h3>
+            <div class="property-details">
+              <p>4 dormitorios</p>
+              <p>2 baños</p>
+              <p>270 m²</p>
+              <address>
+                Calle independencia, Miraflores, Lima
+             </address>
+              <p>S/5,413</p>
+              <p>Costo de luz, agua e internet incluido</p>
+          </div>
+          <div class="boton-modal">
+          <a href="docs/Contrato.pdf">Ver contrato</a>
+          </div>
+          <!--Boton-->
+    <div class="boton-modal">
+      <label for="btn-modal">
+          Ver terminos y condiciones
+      </label>
+  </div>
+<!--Fin de Boton-->
+<!--Ventana Modal-->
+  <input type="checkbox" id="btn-modal">
+  <div class="container-modal">
+      <div class="content-modal">
+          <h2>Terminos y condiciones</h2>
+          <p>La normativa peruana indica que, para los contratos, “contratación inteligente", no constituye una categoría contractual independiente, pues, su perfeccionamiento y desarrollo se enmarca en la tradicional teoría general de los contratos. En ese sentido, no representa una innovación desde el punto de vista legal, pues para que nazca un contrato solo es necesario que dos o más partes consientan en adquirir obligaciones, entonces la normativa peruana en materia contractual es suficiente para la aplicación de contratos inteligentes.<br>
+            Las partes del contrato inteligente acordarían las negociaciones por fuera de la Blockchain y solo acudirían a esta para consignar los acuerdos en el contrato inteligente. <br>
+            El Perfeccionamiento del contrato inteligente será cobijado por la normativa peruana, consonante con el principio de neutralidad tecnológica y en el cual un notario participa en el sistema validar cada transacción y para hacer legal la compraventa.<br>
+            Las obligaciones del contrato inteligente serán incorporadas en la blockchain, dichas obligaciones se ejecutan por sí mismas sin que la parte deudora pueda impedirlo o pueda saltarse alguna clausula. Las partes del contrato inteligente podrán hacer uso de su derecho de acción para activar la jurisdicción y obtener la satisfacción de una pretensión mediante un proceso. Los jueces que conozcan de los casos podrán intervenir en escenarios de ineficacia, revisión e incumplimiento bajo las condiciones anteriormente anotadas.</p>
+          <div class="btn-cerrar">
+              <label for="btn-modal">Cerrar</label>
+          </div>
+      </div>
+      <label for="btn-modal" class="cerrar-modal"></label>
+  </div>
+<!--Fin de Ventana Modal-->
+
+          </div>
+          <form id="taskForm" class="card card-body bg-dark">
+            <h4>Smart Contract</h4>
+            <input
+              type="text"
+              id="dniPropietario"
+              value="71569368"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Dni Propietario"
+              readonly
+            />
+            <input
+              type="text"
+              id="dniInquilino"
+              value="41253698"
+              rows="2"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Dni Inquilino"
+              readonly
+            />
+            <input
+              type="text"
+              id="datosInmueble"
+              value="Calle independencia, Miraflores, Lima"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Datos Inmueble"
+              readonly
+            />
+            <input
+              type="text"
+              id="caracteristicasInmueble"
+              value="4 dormitorios, 2 baños, 270 m²"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Caracteristicas Inmueble"
+              readonly
+            />
+            <input
+              type="text"
+              id="plazoAlquiler"
+              value="Mensual"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Plazo Alquiler"
+              readonly
+            />
+            <input
+              type="text"
+              id="montoAlquiler"
+              value="5413"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Monto Alquiler"
+              readonly
+            />
+            <input
+              type="text"
+              id="moraDiaria"
+              value="70"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Mora diaria"
+              readonly
+            />
+
+            <button type="submit" class="btn btn-primary">Desplegar el Smart Contract</button>
+          
+          </form>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card card-body bg-dark rounded-0 mb-2 mt-5">
+              <h3>
+                <span class="material-icons"> description </span>
+                Contratos realizados
+              </h3>
+          </div>
+
+          <div id="tasksList" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="flex container">
+          <div class="footer-about">
+              <h5>Acerca del servicio</h5>
+              <p>Te permitimos contactar directamente con los Arrendadores y disponer de un contrato inteligente libre de alteraciones de contratos con la mejor seguridad.</p>
+          </div>
+
+          <div class="footer-quick-links">
+              <h5>Enlaces</h5>
+              <ul>
+                  <li><a href="#">Acerca de nosotros</a></li>
+                  <li><a href="#">Servicios</a></li>
+                  <li><a href="#">Testimonios</a></li>
+                  <li><a href="#">Contáctanos</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-subscribe">
+              <h5>Regístrate y se parte de BlockRentPE</h5>
+              <div id="subscribe-container">
+                  <input type="text" placeholder="Ingresa Email" />
+                  <a class="right-rounded">Enviar</a>
+              </div>
+
+              <h5 class="follow-us">Síguenos</h5>
+              <ul>
+                  <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                  <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                  <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                  <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+              </ul>
+          </div>
+      </div>
+
+      <small>
+          Copyright &copy; 2021 All rights reserved</span> 
+      <!-- <a href="https://colorlib.com">Colorlib </a> -->
+        
+      </small>
+  </footer>
+
+  <script>
+      $(function () {
+          let headerElem = $('header');
+          let logo = $('#logo');
+          let navMenu = $('#nav-menu');
+          let navToggle = $('#nav-toggle');
+
+         $('#properties-slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              prevArrow: '<a href="#" class="slick-arrow slick-prev">Ant.</a>',
+              nextArrow: '<a href="#" class="slick-arrow slick-next">Sig.</a>',
+              responsive: [
+                  {
+                      breakpoint: 1100,
+                      settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 1,
+                          infinite: true,
+                      }
+                  },
+                  {
+                      breakpoint: 767,
+                      settings: {
+                          slidesToShow: 2,
+                          slidesToScroll: 1,
+                          infinite: true,
+                      }
+                  },
+                  {
+                      breakpoint: 530,
+                      settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1,
+                          infinite: true,
+                      }
+                  }
+              ]
+         });
+
+         $('#testimonials-slider').slick({
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              prevArrow: '<a href="#" class="slick-arrow slick-prev"><</a>',
+              nextArrow: '<a href="#" class="slick-arrow slick-next">></a>'
+         });
+
+         navToggle.on('click', () => {
+             navMenu.css('right', '0');
+         });
+
+         $('#close-flyout').on('click', () => {
+              navMenu.css('right', '-100%');
+         });
+
+         $(document).on('click', (e) => {
+             let target = $(e.target);
+             if (!(target.closest('#nav-toggle').length > 0 || target.closest('#nav-menu').length > 0)) {
+                 navMenu.css('right', '-100%');
+             }
+         });
+
+         $(document).scroll(() => {
+             let scrollTop = $(document).scrollTop();
+
+             if (scrollTop > 0) {
+                 navMenu.addClass('is-sticky');
+                 logo.css('color', '#000');
+                 headerElem.css('background', '#fff');
+                 navToggle.css('border-color', '#000');
+                 navToggle.find('.strip').css('background-color', '#000');
+             } else {
+                 navMenu.removeClass('is-sticky');
+                 logo.css('color', '#fff');
+                 headerElem.css('background', 'transparent');
+                 navToggle.css('bordre-color', '#fff');
+                 navToggle.find('.strip').css('background-color', '#fff');
+             }
+
+             headerElem.css(scrollTop >= 200 ? {'padding': '0.5rem', 'box-shadow': '0 -4px 10px 1px #999'} : {'padding': '1rem 0', 'box-shadow': 'none' });
+         });
+
+         $(document).trigger('scroll');
+      });
+  </script>
+
+   <!-- <script src="/libs/web3/dist/web3.min.js"></script> -->
+   <script src="/libs/@truffle/contract/dist/truffle-contract.min.js"></script>
+   <script src="./app.js"></script>
+   <script src="./ui.js"></script>
+  </body>
+</html>
